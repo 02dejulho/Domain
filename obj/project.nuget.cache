@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "4T6WEVtSa13LWhzXA1cqmo1zDdeZQnWqIne8XMoTqSffVpq6iodsMk7sWX9RxCEcrf7wAWRvoS9LPcV/PpH9Uw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\lucia\\Desktop\\SENAC-TII\\MODULO A\\UC08 - Projeto Integrador Dev Web\\PI-lucianasilva-Atv4\\PI-lucianasilva-Atv4.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lucia\\.nuget\\packages\\mysqlconnector\\2.2.1\\mysqlconnector.2.2.1.nupkg.sha512",
+    "C:\\Users\\lucia\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
+    "C:\\Users\\lucia\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\lucia\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

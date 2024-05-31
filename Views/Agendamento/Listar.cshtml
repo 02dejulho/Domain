@@ -1,0 +1,48 @@
+@model List<agendamentos>
+
+@{
+ViewData["Title"] = "Lista de Agendamentos";
+}
+    
+<h3>
+    Aqui está a lista de agendamentos:
+
+</h3>
+
+<table width="100%" border="1"> 
+
+    <tr>
+        <th style="text-align:center" width="300px">Cliente:</th>
+        <th style="text-align:center" width="300px">Nome:</th>
+        <th style="text-align:center" width="300px">Telefone:</th>
+        <th style="text-align:center" width="300px">Data:</th>
+        <th style="text-align:center" width="300px">Área:</th>
+        <th style="text-align:center" width="300px">Proc. Desejado:</th>
+        <th style="text-align:center" width="300px">Observações:</th> 
+        <th style="text-align:center" width="300px">Ação:</th>          
+    </tr>
+
+
+    @foreach(agendamentos ag in Model) //dados serao apresentados na tabela. Cada dado 'da' guarda uma informação - variaveis declaradas na classe DadosAgendamento
+    {  
+
+        <tr>  
+            <td style="text-align:center" width="300px">@ag.clienteag</td>                                                                      
+            <td style="text-align:center" width="300px">@ag.nome</td>
+            <td style="text-align:center" width="300px">@ag.tel</td>
+            <td style="text-align:center" width="300px">@ag.data.Day/ @ag.data.Month/ @ag.data.Year</td>            
+            <td style="text-align:center" width="300px">@ag.area</td>
+            <td style="text-align:center" width="300px">@ag.procedimento</td>
+            <td style="text-align:center" width="300px">@ag.observacoes</td>
+
+
+            <td>
+                <a href="/Agendamento/Editar?idBusca=@ag.idAg">Editar</a> | 
+                <a href="/Agendamento/Deletar?idDelete=@ag.idAg">Excluir</a>
+            </td>
+
+
+        </tr> 
+    }
+
+</table>

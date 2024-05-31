@@ -1,0 +1,74 @@
+@model agendamentos;
+
+@{
+    ViewData["Title"] = "Página de Edição";
+}
+
+
+<div class="row">
+<h3 class="col">Editar Agendamento:</h3>
+</div>
+
+<div class="row">
+    <div class="col-6">
+    <form method="POST"  asp-action="Editar">
+
+        <div class="form-group">
+            <input asp-for="idAg"  type="hidden" class="form-control">
+        </div>
+
+        <div class="form-group">
+                <label>Você já é nossa cliente?</label>
+                <select name="clienteag" class="form-control">
+                    <option>Sim</option>
+                    <option>Não</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Nome:</label>
+                <input asp-for="nome"  class="form-control">
+            </div>        
+
+            <div class="form-group">
+                <label>Telefone:</label>
+                <input asp-for="tel"  class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>E-mail:</label>
+                <input asp-for="email" type="email" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>Data:</label>   
+                <input asp-for="data" type="date" class="form-control"> 
+            </div>
+
+            
+            <div class="form-group">
+                <label>Área</label>
+                <select name="area" class="form-control">
+                    <option>Estética Facial</option>
+                    <option>Estética Corporal</option>
+                    <option>Mãos e Pés</option>
+                    <option>Depilação</option>
+                    <option>Spa Day</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Procedimento Desejado:</label>
+                <input asp-for="procedimento" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>Observações:</label>
+                <textarea asp-for="observacoes" rows="4" cols="50" class="form-control"></textarea>
+            </div>
+
+            <input type="submit" value="Atualizar" class="btn w-25 btn-warning">
+
+    </form>
+</div>
+</div>

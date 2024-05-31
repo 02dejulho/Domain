@@ -1,0 +1,40 @@
+@model List<faleconosco>
+    
+@{
+    ViewData["Title"] = "Lista de Mensagens";
+}
+
+<h3>
+    Aqui estão as mensagens recebidas no Fale Conosco:
+</h3>
+
+<table width="100%" border="1">
+
+    <tr>
+
+        <th style="text-align:center" width="300px">Nome:</th>
+        <th style="text-align:center" width="300px">Telefone:</th> 
+        <th style="text-align:center" width="300px">Email:</th> 
+        <th style="text-align:center" width="300px">Cliente:</th>
+        <th style="text-align:center" width="300px">Mensagem:</th>           
+
+
+    </tr>
+
+
+    @foreach(faleconosco fc in Model) 
+    {
+
+    <tr>                                                                        
+
+        <td style="text-align:center" width="300px">@fc.nomefc</td>
+        <td style="text-align:center" width="300px">@fc.telfc</td>
+        <td style="text-align:center" width="300px">@fc.emailfc</td>
+        <td style="text-align:center" width="300px">@fc.cliente</td>
+        <td style="text-align:center" width="300px">@fc.msg</td>
+
+    </tr> 
+
+    }
+
+</table>

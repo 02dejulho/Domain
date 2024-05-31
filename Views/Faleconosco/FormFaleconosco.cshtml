@@ -1,0 +1,53 @@
+@model faleconosco;
+
+@{
+    ViewData["Title"] = "Fale Conosco";
+}
+
+
+<div class="row">
+    <h3 class="col">
+        Olá! Aqui é o seu espaço para tirar dúvidas. 
+        <br>
+        Esteja a vontade também para deixar seu elogio, crítica ou sugestão:
+    </h3>
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <form method="POST"  asp-action="FormFaleconosco">
+
+            <div class="form-group">
+                <label>Nome Completo:</label>
+                <input asp-for="nomefc"  class="form-control">
+            </div>
+        
+
+            <div class="form-group">
+                <label>Telefone:</label>
+                <input asp-for="telfc"  class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>E-mail:</label>
+                <input asp-for="emailfc" type="email" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>Você já é nossa cliente?</label>
+                <select name="cliente" class="form-control">
+                    <option>Sim</option>
+                    <option>Não</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Mensagem:</label>
+                <textarea asp-for="msg" rows="4" cols="50" class="form-control"></textarea>
+            </div>
+
+            <input type="submit" value="Enviar" class="btn w-25 btn-warning">
+
+        </form>
+    </div>
+</div>
